@@ -1,7 +1,7 @@
 ﻿
 namespace InventoryManagerUI
 {
-    partial class createCaseForm
+    partial class CreateCaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,84 +29,56 @@ namespace InventoryManagerUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.createCaseButton = new System.Windows.Forms.Button();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.startDateLabel = new System.Windows.Forms.Label();
+            this.createCaseLabel = new System.Windows.Forms.Label();
             this.caseNameValue = new System.Windows.Forms.TextBox();
-            this.startDateValue = new System.Windows.Forms.TextBox();
+            this.createCaseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // createCaseButton
+            // createCaseLabel
             // 
-            this.createCaseButton.Location = new System.Drawing.Point(246, 420);
-            this.createCaseButton.Name = "createCaseButton";
-            this.createCaseButton.Size = new System.Drawing.Size(278, 79);
-            this.createCaseButton.TabIndex = 2;
-            this.createCaseButton.Text = "Create Case";
-            this.createCaseButton.UseVisualStyleBackColor = true;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(12, 80);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(207, 50);
-            this.nameLabel.TabIndex = 3;
-            this.nameLabel.Text = "Case Name:";
-            // 
-            // startDateLabel
-            // 
-            this.startDateLabel.AutoSize = true;
-            this.startDateLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startDateLabel.Location = new System.Drawing.Point(12, 163);
-            this.startDateLabel.Name = "startDateLabel";
-            this.startDateLabel.Size = new System.Drawing.Size(185, 50);
-            this.startDateLabel.TabIndex = 4;
-            this.startDateLabel.Text = "Start Date:";
+            this.createCaseLabel.AutoSize = true;
+            this.createCaseLabel.Location = new System.Drawing.Point(127, 63);
+            this.createCaseLabel.Name = "createCaseLabel";
+            this.createCaseLabel.Size = new System.Drawing.Size(65, 13);
+            this.createCaseLabel.TabIndex = 0;
+            this.createCaseLabel.Text = "Case Name:";
             // 
             // caseNameValue
             // 
-            this.caseNameValue.Location = new System.Drawing.Point(225, 93);
+            this.caseNameValue.Location = new System.Drawing.Point(216, 56);
             this.caseNameValue.Name = "caseNameValue";
-            this.caseNameValue.Size = new System.Drawing.Size(330, 35);
-            this.caseNameValue.TabIndex = 5;
-            this.caseNameValue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.caseNameValue.Size = new System.Drawing.Size(216, 20);
+            this.caseNameValue.TabIndex = 1;
             // 
-            // startDateValue
+            // createCaseButton
             // 
-            this.startDateValue.Location = new System.Drawing.Point(225, 176);
-            this.startDateValue.Name = "startDateValue";
-            this.startDateValue.Size = new System.Drawing.Size(330, 35);
-            this.startDateValue.TabIndex = 6;
+            this.createCaseButton.Location = new System.Drawing.Point(375, 302);
+            this.createCaseButton.Name = "createCaseButton";
+            this.createCaseButton.Size = new System.Drawing.Size(75, 23);
+            this.createCaseButton.TabIndex = 2;
+            this.createCaseButton.Text = "Create Case";
+            this.createCaseButton.UseVisualStyleBackColor = true;
+            this.createCaseButton.Click += new System.EventHandler(this.createCaseButton_Click);
             // 
-            // createCaseForm
+            // CreateCaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 560);
-            this.Controls.Add(this.startDateValue);
-            this.Controls.Add(this.caseNameValue);
-            this.Controls.Add(this.startDateLabel);
-            this.Controls.Add(this.nameLabel);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.createCaseButton);
-            this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.Name = "createCaseForm";
-            this.Text = "Create Case";
-            this.Load += new System.EventHandler(this.CaseViewerForm_Load);
+            this.Controls.Add(this.caseNameValue);
+            this.Controls.Add(this.createCaseLabel);
+            this.Name = "CreateCaseForm";
+            this.Text = "CreateCaseForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button createCaseButton;
-        private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label startDateLabel;
+
+        private System.Windows.Forms.Label createCaseLabel;
         private System.Windows.Forms.TextBox caseNameValue;
-        private System.Windows.Forms.TextBox startDateValue;
+        private System.Windows.Forms.Button createCaseButton;
     }
 }
-

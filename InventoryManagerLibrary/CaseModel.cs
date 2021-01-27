@@ -87,5 +87,15 @@ namespace InventoryManagerLibrary
         /// The location of a case.
         /// </summary>
         public string CaseLocation { get; set; }
+
+        public CaseModel()
+        {
+
+        }
+
+        public CaseModel(string caseName)
+        {
+            CaseName = caseName;
+        }
     }
 }

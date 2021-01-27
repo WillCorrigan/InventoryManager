@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagerLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,26 +11,44 @@ using System.Windows.Forms;
 
 namespace InventoryManagerUI
 {
-    public partial class createCaseForm : Form
+    public partial class CreateCaseForm : Form
     {
-        public createCaseForm()
+        public CreateCaseForm()
         {
             InitializeComponent();
         }
 
-        private void CaseViewerForm_Load(object sender, EventArgs e)
+        private void createCaseButton_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
+                CaseModel model = new CaseModel(caseNameValue.Text);
 
+                foreach (IDataConnection db in GlobalConfig.Connections)
+                {
+                    db.CreateCase(model);
+
+                }
+
+                // TODO - Rest of case contents
+
+            }
+            else
+            {
+                MessageBox.Show("This form is invalid, please try again.");
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private bool ValidateForm()
         {
+            bool output = true;
 
-        }
+            if (caseNameValue.Text.Length == 0)
+            {
+                output = false;
+            }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
+            return output;
         }
     }
 }

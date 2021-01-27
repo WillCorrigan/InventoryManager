@@ -18,9 +18,9 @@ namespace InventoryManagerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialise the database connections
-            //InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, true);
+            InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, true);
 
-            Application.Run(new createCaseForm());
+            Application.Run(new CreateCaseForm());
         }
     }
 }
