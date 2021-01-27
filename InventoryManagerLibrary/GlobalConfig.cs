@@ -1,6 +1,8 @@
 ﻿using InventoryManagerLibrary.DataAccess;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +18,8 @@ namespace InventoryManagerLibrary
              if (database)
             {
                 // TODO - Set up the SQL Connector properly
-                SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                NpgsqlConnector npgsql = new NpgsqlConnector();
+                Connections.Add(npgsql);
             }
 
              if (textFiles)
@@ -26,6 +28,11 @@ namespace InventoryManagerLibrary
                 TextConnector text = new TextConnector();
                 Connections.Add(text);
             }
+        }
+
+        public static string CnnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
