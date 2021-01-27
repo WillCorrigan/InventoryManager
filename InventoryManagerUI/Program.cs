@@ -21,6 +21,8 @@ namespace InventoryManagerUI
             InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, true);
 
             Application.Run(new CreateCaseForm());
+
+            // TODO - Update to Dashboard Start
         }
     }
 }

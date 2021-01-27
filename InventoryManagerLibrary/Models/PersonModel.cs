@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManagerLibrary
+namespace InventoryManagerLibrary.Models
 {
     public class PersonModel
     {

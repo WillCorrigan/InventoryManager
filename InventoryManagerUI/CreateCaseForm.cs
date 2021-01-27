@@ -1,4 +1,6 @@
 ﻿using InventoryManagerLibrary;
+using InventoryManagerLibrary.DataAccess;
+using InventoryManagerLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +31,9 @@ namespace InventoryManagerUI
                     db.CreateCase(model);
 
                 }
+
+                caseNameValue.Text = "";
+                MessageBox.Show("Case Created.");
 
                 // TODO - Rest of case contents
 
