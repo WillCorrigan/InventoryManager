@@ -64,10 +64,12 @@ namespace InventoryManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1039, 593);
             this.Controls.Add(this.createCaseButton);
             this.Controls.Add(this.caseNameValue);
             this.Controls.Add(this.createCaseLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CreateCaseForm";
             this.Text = "CreateCaseForm";
             this.ResumeLayout(false);
