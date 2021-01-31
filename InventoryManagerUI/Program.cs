@@ -20,7 +20,7 @@ namespace InventoryManagerUI
             // Initialise the database connections
             InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, true);
 
-            Application.Run(new CreateCaseForm());
+            Application.Run(new DashboardForm());
 
             // TODO - Update to Dashboard Start
         }
