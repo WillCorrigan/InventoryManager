@@ -39,9 +39,9 @@ namespace InventoryManagerLibrary.Models
         public string CaseType { get; set; }
 
         /// <summary>
-        /// Case status (To be prepared/in progress/completed/cleared)
+        /// Case status (To be prepared/in progress/completed/cleared/cancelled)
         /// </summary>
-        public string CaseStatus { get; set; }
+        public CaseStatus CaseStatus { get; set; }
 
         /// <summary>
         /// Amount of faults that stopped proceedings.

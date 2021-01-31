@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\CaseModel.cs" />
+    <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\EquipmentModel.cs" />
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="DataAccess\IDataConnection.cs" />
