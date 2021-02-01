@@ -172,6 +172,7 @@ namespace InventoryManagerUI
             this.createCaseButton.TabIndex = 0;
             this.createCaseButton.Text = "Create Case";
             this.createCaseButton.UseVisualStyleBackColor = true;
+            this.createCaseButton.Click += new System.EventHandler(this.createCaseButton_Click);
             // 
             // equipmentDropdownButton
             // 

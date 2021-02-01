@@ -37,6 +37,7 @@ namespace InventoryManagerUI
             // createCaseLabel
             // 
             this.createCaseLabel.AutoSize = true;
+            this.createCaseLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.createCaseLabel.Location = new System.Drawing.Point(127, 63);
             this.createCaseLabel.Name = "createCaseLabel";
             this.createCaseLabel.Size = new System.Drawing.Size(65, 13);
@@ -64,7 +65,7 @@ namespace InventoryManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(1039, 593);
             this.Controls.Add(this.createCaseButton);
             this.Controls.Add(this.caseNameValue);

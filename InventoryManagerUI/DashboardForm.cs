@@ -15,7 +15,8 @@ namespace InventoryManagerUI
     {
         // Global Variables 
         Panel currentActivePanel = null;
-        Button currentActiveButton = null;
+        Button currentActiveDropdownButton = null;
+        Button currentActiveSubmenuButton = null;
         Form currentActiveForm = null;
 
 
@@ -41,7 +42,7 @@ namespace InventoryManagerUI
         void toggleDropdownMenu(Object sender, EventArgs e)
         {
             var buttonName = ((Button)sender).Name;
-            HighlightActiveButton(sender);
+            HighlightActiveDropdownButton(sender);
 
             switch (buttonName)
             {
@@ -68,19 +69,36 @@ namespace InventoryManagerUI
         }
 
         // Sets submenu button to active and highlights it (while un-highlighting previous active button)
-        private void HighlightActiveButton(Object sender)
+        private void HighlightActiveDropdownButton(Object sender)
         {
             var buttonObject = ((Button)sender);
-            if(currentActiveButton == null)
+            if(currentActiveDropdownButton == null)
             {
-                currentActiveButton = buttonObject;
-                currentActiveButton.BackColor = Color.FromArgb(100, 100, 100);
+                currentActiveDropdownButton = buttonObject;
+                currentActiveDropdownButton.BackColor = Color.FromArgb(100, 100, 100);
             }
-            if (currentActiveButton != buttonObject)
+            if (currentActiveDropdownButton != buttonObject)
             {
-                currentActiveButton.BackColor = Color.FromArgb(32, 34, 37);
-                currentActiveButton = ((Button)sender);
-                currentActiveButton.BackColor = Color.FromArgb(100, 100, 100);
+                currentActiveDropdownButton.BackColor = Color.FromArgb(32, 34, 37);
+                currentActiveDropdownButton = ((Button)sender);
+                currentActiveDropdownButton.BackColor = Color.FromArgb(100, 100, 100);
+            }
+        }
+
+        private void HighlightActiveSubmenuButton(Object sender)
+        {
+            var buttonObject = ((Button)sender);
+            if (currentActiveSubmenuButton == null)
+            {
+                currentActiveSubmenuButton = buttonObject;
+                currentActiveSubmenuButton.BackColor = Color.FromArgb(37,122,253);
+            }
+            if (currentActiveSubmenuButton != buttonObject)
+            {
+                currentActiveSubmenuButton.BackColor = Color.FromArgb(32, 34, 37);
+                currentActiveSubmenuButton = buttonObject;
+                currentActiveSubmenuButton.BackColor = Color.FromArgb(37, 122, 253);
+
             }
         }
 
@@ -156,5 +174,10 @@ namespace InventoryManagerUI
             Application.Exit();
         }
 
+        private void createCaseButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CreateCaseForm(), sender);
+            HighlightActiveSubmenuButton(sender);
+        }
     }
 }
