@@ -55,5 +55,10 @@ namespace InventoryManagerUI
 
             return output;
         }
+
+        private void caseNameValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
