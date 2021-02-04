@@ -44,6 +44,11 @@ namespace InventoryManagerUI
             }
         }
 
+
+
+
+
+
         private bool ValidateForm()
         {
             bool output = true;
@@ -56,7 +61,27 @@ namespace InventoryManagerUI
             return output;
         }
 
+
+
+
+
+
         private void caseNameValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
