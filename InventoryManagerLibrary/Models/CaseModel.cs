@@ -36,7 +36,7 @@ namespace InventoryManagerLibrary.Models
         /// <summary>
         /// Type of case (EPE/Realtime etc).
         /// </summary>
-        public string CaseType { get; set; }
+        public CaseType CaseType { get; set; }
 
         /// <summary>
         /// Case status (To be prepared/in progress/completed/cleared/cancelled)
@@ -93,9 +93,32 @@ namespace InventoryManagerLibrary.Models
 
         }
 
-        public CaseModel(string caseName)
+        public CaseModel(string caseName, string startDate, string endDate, string startTime, string caseType)
         {
             CaseName = caseName;
+
+            DateTime startDateValue = new DateTime(1900, 1, 1);
+            DateTime.TryParse(startDate, out startDateValue);
+            StartDate = startDateValue;
+
+            DateTime endDateValue = new DateTime(1900, 1, 1);
+            DateTime.TryParse(endDate, out endDateValue);
+            StartDate = endDateValue;
+
+            DateTime startTimevalue = DateTime.Parse("9:00 AM");
+            DateTime.TryParse(startTime, out startTimevalue);
+            StartTime = startTimevalue;
+
+            // TODO - add location id model
+            // TODO - add case status model
+            // TODO - add case type model
+
+            CaseType caseTypeValue = 
+            CaseType = caseTypeValue;
+
+
+
+
         }
     }
 }

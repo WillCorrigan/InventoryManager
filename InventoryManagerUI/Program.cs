@@ -18,11 +18,9 @@ namespace InventoryManagerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialise the database connections
-            InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, true);
+            InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, false);
 
             Application.Run(new DashboardForm());
-
-            // TODO - Update to Dashboard Start
         }
     }
 }

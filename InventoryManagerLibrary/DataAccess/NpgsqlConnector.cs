@@ -25,7 +25,11 @@ namespace InventoryManagerLibrary.DataAccess
                 connection.Open();
                 var p = new DynamicParameters();
                 p.Add("@CaseName", caseItem.CaseName);
-                connection.Execute("INSERT INTO public.case (case_name) VALUES (@CaseName);", p);
+                p.Add("@CaseStartDate", caseItem.StartDate);
+                p.Add("@CaseEndDate", caseItem.EndDate);
+                p.Add("@CaseStartTime", caseItem.StartTime);
+                p.Add("@CaseType", caseItem.CaseType);
+                connection.Execute("INSERT INTO public.case (case_name, start_date, end_date, start_time, case_type_id) VALUES (@CaseName, @CaseStartDate, @CaseEndDate, @CaseStartTime, @CaseType);", p);
                 var value = connection.Query("SELECT case_name FROM public.case;");
                 Console.WriteLine(value.First());
                 return caseItem;

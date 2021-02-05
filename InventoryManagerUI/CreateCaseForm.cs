@@ -18,13 +18,21 @@ namespace InventoryManagerUI
         public CreateCaseForm()
         {
             InitializeComponent();
+            WireUpLists();
+        }
+
+
+        private void WireUpLists()
+        {
+            caseTypeValue.DataSource = Enum.GetValues(typeof(CaseStatus));
+            caseTypeValue.DisplayMember = "";
         }
 
         private void createCaseButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
-                CaseModel model = new CaseModel(caseNameValue.Text);
+                CaseModel model = new CaseModel(caseNameValue.Text, startDateValue.Text, endDateValue.Text, startTimeValue.Text, caseTypeValue.Text);
 
                 foreach (IDataConnection db in GlobalConfig.Connections)
                 {
@@ -33,6 +41,10 @@ namespace InventoryManagerUI
                 }
 
                 caseNameValue.Text = "";
+
+
+
+
                 MessageBox.Show("Case Created.");
 
                 // TODO - Rest of case contents
@@ -82,6 +94,11 @@ namespace InventoryManagerUI
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void createCaseLabel_Click(object sender, EventArgs e)
         {
 
         }
