@@ -7,21 +7,23 @@ using System.Threading.Tasks;
 
 namespace InventoryManagerLibrary.Models
 {
-    public enum CaseStatus
-    {
-        [Description("In Progress")]
-        InProgress,
-        Completed,
-        [Description("To Be Prepared")]
-        ToBePrepared,
-        Cleared,
-        Cancelled
+        public enum CaseStatus
+        {
+            [Description("In Progress")]
+            InProgress = 1,
+            [Description("Completed")]
+            Completed = 2,
+            [Description("To Be Prepared")]
+            ToBePrepared = 3,
+            [Description("Cleared")]
+            Cleared = 4,
+            [Description("Cancelled")]
+            Cancelled = 5
     }
 
-    public enum CaseType
+    public enum DatabaseType
     {
-        EPE = 1,
-        RT = 2,
-        Daily = 3
+        Sql,
+        TextFile
     }
 }

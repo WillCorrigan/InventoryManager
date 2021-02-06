@@ -15,6 +15,8 @@ namespace InventoryManagerUI
 {
     public partial class CreateCaseForm : Form
     {
+        private List<CaseTypeModel> availableCaseTypes = GlobalConfig.Connection.GetCaseType_All();
+
         public CreateCaseForm()
         {
             InitializeComponent();
@@ -24,26 +26,21 @@ namespace InventoryManagerUI
 
         private void WireUpLists()
         {
-            caseTypeValue.DataSource = Enum.GetValues(typeof(CaseStatus));
-            caseTypeValue.DisplayMember = "";
+            caseTypeValue.ValueMember = "Id";
+            caseTypeValue.DataSource = availableCaseTypes;
+            caseTypeValue.DisplayMember = "Type";
         }
 
         private void createCaseButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
-                CaseModel model = new CaseModel(caseNameValue.Text, startDateValue.Text, endDateValue.Text, startTimeValue.Text, caseTypeValue.Text);
+                CaseTypeModel sendCaseTypeObject = ((CaseTypeModel)caseTypeValue.SelectedItem);
+                CaseModel model = new CaseModel(caseNameValue.Text, startDateValue.Text, endDateValue.Text, startTimeValue.Text, sendCaseTypeObject);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreateCase(model);
-
-                }
+                GlobalConfig.Connection.CreateCase(model);
 
                 caseNameValue.Text = "";
-
-
-
 
                 MessageBox.Show("Case Created.");
 

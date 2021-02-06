@@ -1,4 +1,5 @@
 ﻿using InventoryManagerLibrary.DataAccess;
+using InventoryManagerLibrary.Models;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -11,22 +12,22 @@ namespace InventoryManagerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
 
-        public static void InitialiseConnections(bool database, bool textFiles)
+        public static void InitialiseConnections(DatabaseType db)
         {
-             if (database)
+             if (db == DatabaseType.Sql)
             {
                 // TODO - Set up the SQL Connector properly
                 NpgsqlConnector npgsql = new NpgsqlConnector();
-                Connections.Add(npgsql);
+                Connection = npgsql;
             }
 
-             if (textFiles)
+             if (db == DatabaseType.TextFile)
             {
                 // TODO - Create text connection
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                Connection = text;
             }
         }
 

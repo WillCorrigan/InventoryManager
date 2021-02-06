@@ -133,6 +133,7 @@ namespace InventoryManagerUI
             this.viewAllCasesButton.TabIndex = 3;
             this.viewAllCasesButton.Text = "View All";
             this.viewAllCasesButton.UseVisualStyleBackColor = true;
+            this.viewAllCasesButton.Click += new System.EventHandler(this.viewAllCasesButton_Click);
             // 
             // viewCaseButton
             // 

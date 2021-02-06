@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagerLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace InventoryManagerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialise the database connections
-            InventoryManagerLibrary.GlobalConfig.InitialiseConnections(true, false);
+            InventoryManagerLibrary.GlobalConfig.InitialiseConnections(DatabaseType.Sql);
 
             Application.Run(new DashboardForm());
         }

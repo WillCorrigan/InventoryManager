@@ -16,5 +16,10 @@ namespace InventoryManagerLibrary.DataAccess
 
             return caseItem;
         }
+
+        public List<CaseTypeModel> GetCaseType_All()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

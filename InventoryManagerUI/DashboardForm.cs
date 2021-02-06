@@ -179,5 +179,10 @@ namespace InventoryManagerUI
             OpenChildForm(new CreateCaseForm(), sender);
             HighlightActiveSubmenuButton(sender);
         }
+
+        private void viewAllCasesButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
