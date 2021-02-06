@@ -32,12 +32,30 @@ namespace InventoryManagerLibrary.DataAccess
                 p.Add("@CaseStartTime", caseItem.StartTime);
                 p.Add("@CaseType", caseItem.CaseType.Id);
                 connection.Execute("INSERT INTO public.case (case_name, start_date, end_date, start_time, case_type_id) VALUES (@CaseName, @CaseStartDate, @CaseEndDate, @CaseStartTime, @CaseType);", p);
-                var value = connection.Query("SELECT case_name FROM public.case;");
-                Console.WriteLine(value.First());
                 return caseItem;
             }
         }
 
+
+        public List<CaseModel> GetCases_All()
+        {
+            List<CaseModel> output;
+            var sql = @"SELECT case_name CaseName, start_date StartDate, end_date EndDate FROM public.case";
+
+
+            using (var connection = new NpgsqlConnection(GlobalConfig.CnnString(db)))
+            {
+                connection.Open();
+                output = connection.Query<CaseModel>(sql).ToList();
+            }
+            return output;
+        }
+
+
+        /// <summary>
+        /// Gets all the case types from the database.
+        /// </summary>
+        /// <returns>Returns a list of case types.</returns>
         public List<CaseTypeModel> GetCaseType_All()
         {
             List<CaseTypeModel> output;

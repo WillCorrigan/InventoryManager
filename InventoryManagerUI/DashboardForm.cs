@@ -95,7 +95,7 @@ namespace InventoryManagerUI
             }
             if (currentActiveSubmenuButton != buttonObject)
             {
-                currentActiveSubmenuButton.BackColor = Color.FromArgb(32, 34, 37);
+                currentActiveSubmenuButton.BackColor = Color.FromArgb(47, 49, 54);
                 currentActiveSubmenuButton = buttonObject;
                 currentActiveSubmenuButton.BackColor = Color.FromArgb(37, 122, 253);
 
@@ -182,7 +182,8 @@ namespace InventoryManagerUI
 
         private void viewAllCasesButton_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ViewAllCasesForm(), sender);
+            HighlightActiveSubmenuButton(sender);
         }
     }
 }

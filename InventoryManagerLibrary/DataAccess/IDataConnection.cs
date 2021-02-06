@@ -13,5 +13,7 @@ namespace InventoryManagerLibrary.DataAccess
 
         List<CaseTypeModel> GetCaseType_All();
 
+        List<CaseModel> GetCases_All();
+
     }
 }

@@ -41,12 +41,12 @@ namespace InventoryManagerUI
             this.createCaseButton = new System.Windows.Forms.Button();
             this.caseNameLabel = new System.Windows.Forms.Label();
             this.caseNameValue = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.createCaseFormPanel = new System.Windows.Forms.Panel();
             this.caseTypeValue = new System.Windows.Forms.ComboBox();
             this.caseTypeLabel = new System.Windows.Forms.Label();
             this.locationValue = new System.Windows.Forms.ComboBox();
             this.titlePanel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.createCaseFormPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlePanel
@@ -177,27 +177,27 @@ namespace InventoryManagerUI
             this.caseNameValue.TabIndex = 1;
             this.caseNameValue.TextChanged += new System.EventHandler(this.caseNameValue_TextChanged);
             // 
-            // panel2
+            // createCaseFormPanel
             // 
-            this.panel2.Controls.Add(this.caseTypeValue);
-            this.panel2.Controls.Add(this.caseTypeLabel);
-            this.panel2.Controls.Add(this.locationValue);
-            this.panel2.Controls.Add(this.caseNameValue);
-            this.panel2.Controls.Add(this.caseNameLabel);
-            this.panel2.Controls.Add(this.createCaseButton);
-            this.panel2.Controls.Add(this.startDateLabel);
-            this.panel2.Controls.Add(this.startDateValue);
-            this.panel2.Controls.Add(this.endDateLabel);
-            this.panel2.Controls.Add(this.endDateValue);
-            this.panel2.Controls.Add(this.startTimeLabel);
-            this.panel2.Controls.Add(this.startTimeValue);
-            this.panel2.Controls.Add(this.locationLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(978, 732);
-            this.panel2.TabIndex = 12;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.createCaseFormPanel.Controls.Add(this.caseTypeValue);
+            this.createCaseFormPanel.Controls.Add(this.caseTypeLabel);
+            this.createCaseFormPanel.Controls.Add(this.locationValue);
+            this.createCaseFormPanel.Controls.Add(this.caseNameValue);
+            this.createCaseFormPanel.Controls.Add(this.caseNameLabel);
+            this.createCaseFormPanel.Controls.Add(this.createCaseButton);
+            this.createCaseFormPanel.Controls.Add(this.startDateLabel);
+            this.createCaseFormPanel.Controls.Add(this.startDateValue);
+            this.createCaseFormPanel.Controls.Add(this.endDateLabel);
+            this.createCaseFormPanel.Controls.Add(this.endDateValue);
+            this.createCaseFormPanel.Controls.Add(this.startTimeLabel);
+            this.createCaseFormPanel.Controls.Add(this.startTimeValue);
+            this.createCaseFormPanel.Controls.Add(this.locationLabel);
+            this.createCaseFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createCaseFormPanel.Location = new System.Drawing.Point(0, 0);
+            this.createCaseFormPanel.Name = "createCaseFormPanel";
+            this.createCaseFormPanel.Size = new System.Drawing.Size(978, 732);
+            this.createCaseFormPanel.TabIndex = 12;
+            this.createCaseFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // caseTypeValue
             // 
@@ -233,15 +233,15 @@ namespace InventoryManagerUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(978, 732);
             this.Controls.Add(this.titlePanel);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.createCaseFormPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateCaseForm";
             this.Text = "CreateCaseForm";
             this.titlePanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.createCaseFormPanel.ResumeLayout(false);
+            this.createCaseFormPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +259,7 @@ namespace InventoryManagerUI
         private System.Windows.Forms.Button createCaseButton;
         private System.Windows.Forms.Label caseNameLabel;
         private System.Windows.Forms.TextBox caseNameValue;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel createCaseFormPanel;
         private System.Windows.Forms.Label createCaseTitleLabel;
         private System.Windows.Forms.ComboBox caseTypeValue;
         private System.Windows.Forms.Label caseTypeLabel;
