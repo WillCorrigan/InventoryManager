@@ -34,6 +34,7 @@ namespace InventoryManagerUI
             // 
             // caseNameLabel
             // 
+            this.caseNameLabel.ForeColor = System.Drawing.Color.White;
             this.caseNameLabel.Location = new System.Drawing.Point(341, 183);
             this.caseNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.caseNameLabel.Name = "caseNameLabel";
@@ -45,7 +46,8 @@ namespace InventoryManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.ClientSize = new System.Drawing.Size(978, 732);
             this.Controls.Add(this.caseNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

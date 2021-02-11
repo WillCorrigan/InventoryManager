@@ -83,9 +83,10 @@ namespace InventoryManagerUI
             // 
             // allCasesList
             // 
-            this.allCasesList.BackColor = System.Drawing.SystemColors.Window;
+            this.allCasesList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.allCasesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.allCasesList.ForeColor = System.Drawing.SystemColors.Window;
             this.allCasesList.FullRowSelect = true;
-            this.allCasesList.GridLines = true;
             this.allCasesList.HideSelection = false;
             this.allCasesList.Location = new System.Drawing.Point(36, 27);
             this.allCasesList.MultiSelect = false;
