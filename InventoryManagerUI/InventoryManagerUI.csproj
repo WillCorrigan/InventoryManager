@@ -100,6 +100,12 @@
     <Compile Include="ViewAllCasesForm.Designer.cs">
       <DependentUpon>ViewAllCasesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewEditCaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEditCaseForm.Designer.cs">
+      <DependentUpon>ViewEditCaseForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateCaseForm.resx">
       <DependentUpon>CreateCaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="ViewAllCasesForm.resx">
       <DependentUpon>ViewAllCasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEditCaseForm.resx">
+      <DependentUpon>ViewEditCaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

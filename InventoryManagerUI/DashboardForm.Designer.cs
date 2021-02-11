@@ -36,25 +36,21 @@ namespace InventoryManagerUI
             this.casesDropdownPanel = new System.Windows.Forms.Panel();
             this.viewAllCasesButton = new System.Windows.Forms.Button();
             this.viewCaseButton = new System.Windows.Forms.Button();
-            this.editCaseButton = new System.Windows.Forms.Button();
             this.createCaseButton = new System.Windows.Forms.Button();
             this.equipmentDropdownButton = new System.Windows.Forms.Button();
             this.equipmentDropdownPanel = new System.Windows.Forms.Panel();
             this.viewAllEquipmentButton = new System.Windows.Forms.Button();
             this.viewEquipmentButton = new System.Windows.Forms.Button();
-            this.editEquipmentButton = new System.Windows.Forms.Button();
             this.createEquipmentButton = new System.Windows.Forms.Button();
             this.teamDropdownButton = new System.Windows.Forms.Button();
             this.teamDropdownPanel = new System.Windows.Forms.Panel();
             this.viewAllTeamMembersButton = new System.Windows.Forms.Button();
             this.viewTeamMemberButton = new System.Windows.Forms.Button();
-            this.editTeamMemberButton = new System.Windows.Forms.Button();
             this.createTeamMemberButton = new System.Windows.Forms.Button();
             this.locationsDropdownButton = new System.Windows.Forms.Button();
             this.locationsDropdownPanel = new System.Windows.Forms.Panel();
             this.viewAllLocationsButton = new System.Windows.Forms.Button();
             this.viewLocationButton = new System.Windows.Forms.Button();
-            this.editLocationButton = new System.Windows.Forms.Button();
             this.createLocationButton = new System.Windows.Forms.Button();
             this.supportButton = new System.Windows.Forms.Button();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
@@ -112,12 +108,11 @@ namespace InventoryManagerUI
             this.casesDropdownPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.casesDropdownPanel.Controls.Add(this.viewAllCasesButton);
             this.casesDropdownPanel.Controls.Add(this.viewCaseButton);
-            this.casesDropdownPanel.Controls.Add(this.editCaseButton);
             this.casesDropdownPanel.Controls.Add(this.createCaseButton);
             this.casesDropdownPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.casesDropdownPanel.Location = new System.Drawing.Point(0, 257);
             this.casesDropdownPanel.Name = "casesDropdownPanel";
-            this.casesDropdownPanel.Size = new System.Drawing.Size(250, 172);
+            this.casesDropdownPanel.Size = new System.Drawing.Size(250, 121);
             this.casesDropdownPanel.TabIndex = 2;
             this.casesDropdownPanel.Visible = false;
             // 
@@ -127,7 +122,7 @@ namespace InventoryManagerUI
             this.viewAllCasesButton.FlatAppearance.BorderSize = 0;
             this.viewAllCasesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAllCasesButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewAllCasesButton.Location = new System.Drawing.Point(0, 120);
+            this.viewAllCasesButton.Location = new System.Drawing.Point(0, 80);
             this.viewAllCasesButton.Name = "viewAllCasesButton";
             this.viewAllCasesButton.Size = new System.Drawing.Size(250, 40);
             this.viewAllCasesButton.TabIndex = 3;
@@ -141,25 +136,12 @@ namespace InventoryManagerUI
             this.viewCaseButton.FlatAppearance.BorderSize = 0;
             this.viewCaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewCaseButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewCaseButton.Location = new System.Drawing.Point(0, 80);
+            this.viewCaseButton.Location = new System.Drawing.Point(0, 40);
             this.viewCaseButton.Name = "viewCaseButton";
             this.viewCaseButton.Size = new System.Drawing.Size(250, 40);
             this.viewCaseButton.TabIndex = 2;
-            this.viewCaseButton.Text = "View Case";
+            this.viewCaseButton.Text = "View / Edit Case";
             this.viewCaseButton.UseVisualStyleBackColor = true;
-            // 
-            // editCaseButton
-            // 
-            this.editCaseButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editCaseButton.FlatAppearance.BorderSize = 0;
-            this.editCaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editCaseButton.ForeColor = System.Drawing.Color.LightGray;
-            this.editCaseButton.Location = new System.Drawing.Point(0, 40);
-            this.editCaseButton.Name = "editCaseButton";
-            this.editCaseButton.Size = new System.Drawing.Size(250, 40);
-            this.editCaseButton.TabIndex = 1;
-            this.editCaseButton.Text = "Edit Case";
-            this.editCaseButton.UseVisualStyleBackColor = true;
             // 
             // createCaseButton
             // 
@@ -181,7 +163,7 @@ namespace InventoryManagerUI
             this.equipmentDropdownButton.FlatAppearance.BorderSize = 0;
             this.equipmentDropdownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.equipmentDropdownButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.equipmentDropdownButton.Location = new System.Drawing.Point(0, 429);
+            this.equipmentDropdownButton.Location = new System.Drawing.Point(0, 378);
             this.equipmentDropdownButton.Name = "equipmentDropdownButton";
             this.equipmentDropdownButton.Size = new System.Drawing.Size(250, 60);
             this.equipmentDropdownButton.TabIndex = 3;
@@ -193,12 +175,11 @@ namespace InventoryManagerUI
             this.equipmentDropdownPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.equipmentDropdownPanel.Controls.Add(this.viewAllEquipmentButton);
             this.equipmentDropdownPanel.Controls.Add(this.viewEquipmentButton);
-            this.equipmentDropdownPanel.Controls.Add(this.editEquipmentButton);
             this.equipmentDropdownPanel.Controls.Add(this.createEquipmentButton);
             this.equipmentDropdownPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.equipmentDropdownPanel.Location = new System.Drawing.Point(0, 489);
+            this.equipmentDropdownPanel.Location = new System.Drawing.Point(0, 438);
             this.equipmentDropdownPanel.Name = "equipmentDropdownPanel";
-            this.equipmentDropdownPanel.Size = new System.Drawing.Size(250, 172);
+            this.equipmentDropdownPanel.Size = new System.Drawing.Size(250, 119);
             this.equipmentDropdownPanel.TabIndex = 4;
             this.equipmentDropdownPanel.Visible = false;
             // 
@@ -208,7 +189,7 @@ namespace InventoryManagerUI
             this.viewAllEquipmentButton.FlatAppearance.BorderSize = 0;
             this.viewAllEquipmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAllEquipmentButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewAllEquipmentButton.Location = new System.Drawing.Point(0, 120);
+            this.viewAllEquipmentButton.Location = new System.Drawing.Point(0, 80);
             this.viewAllEquipmentButton.Name = "viewAllEquipmentButton";
             this.viewAllEquipmentButton.Size = new System.Drawing.Size(250, 40);
             this.viewAllEquipmentButton.TabIndex = 3;
@@ -221,25 +202,12 @@ namespace InventoryManagerUI
             this.viewEquipmentButton.FlatAppearance.BorderSize = 0;
             this.viewEquipmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewEquipmentButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewEquipmentButton.Location = new System.Drawing.Point(0, 80);
+            this.viewEquipmentButton.Location = new System.Drawing.Point(0, 40);
             this.viewEquipmentButton.Name = "viewEquipmentButton";
             this.viewEquipmentButton.Size = new System.Drawing.Size(250, 40);
             this.viewEquipmentButton.TabIndex = 2;
-            this.viewEquipmentButton.Text = "View Equipment";
+            this.viewEquipmentButton.Text = "View / Edit Equipment";
             this.viewEquipmentButton.UseVisualStyleBackColor = true;
-            // 
-            // editEquipmentButton
-            // 
-            this.editEquipmentButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editEquipmentButton.FlatAppearance.BorderSize = 0;
-            this.editEquipmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editEquipmentButton.ForeColor = System.Drawing.Color.LightGray;
-            this.editEquipmentButton.Location = new System.Drawing.Point(0, 40);
-            this.editEquipmentButton.Name = "editEquipmentButton";
-            this.editEquipmentButton.Size = new System.Drawing.Size(250, 40);
-            this.editEquipmentButton.TabIndex = 1;
-            this.editEquipmentButton.Text = "Edit Equipment";
-            this.editEquipmentButton.UseVisualStyleBackColor = true;
             // 
             // createEquipmentButton
             // 
@@ -260,7 +228,7 @@ namespace InventoryManagerUI
             this.teamDropdownButton.FlatAppearance.BorderSize = 0;
             this.teamDropdownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.teamDropdownButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.teamDropdownButton.Location = new System.Drawing.Point(0, 661);
+            this.teamDropdownButton.Location = new System.Drawing.Point(0, 557);
             this.teamDropdownButton.Name = "teamDropdownButton";
             this.teamDropdownButton.Size = new System.Drawing.Size(250, 60);
             this.teamDropdownButton.TabIndex = 5;
@@ -272,12 +240,11 @@ namespace InventoryManagerUI
             this.teamDropdownPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.teamDropdownPanel.Controls.Add(this.viewAllTeamMembersButton);
             this.teamDropdownPanel.Controls.Add(this.viewTeamMemberButton);
-            this.teamDropdownPanel.Controls.Add(this.editTeamMemberButton);
             this.teamDropdownPanel.Controls.Add(this.createTeamMemberButton);
             this.teamDropdownPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.teamDropdownPanel.Location = new System.Drawing.Point(0, 721);
+            this.teamDropdownPanel.Location = new System.Drawing.Point(0, 617);
             this.teamDropdownPanel.Name = "teamDropdownPanel";
-            this.teamDropdownPanel.Size = new System.Drawing.Size(250, 172);
+            this.teamDropdownPanel.Size = new System.Drawing.Size(250, 118);
             this.teamDropdownPanel.TabIndex = 6;
             this.teamDropdownPanel.Visible = false;
             // 
@@ -287,7 +254,7 @@ namespace InventoryManagerUI
             this.viewAllTeamMembersButton.FlatAppearance.BorderSize = 0;
             this.viewAllTeamMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAllTeamMembersButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewAllTeamMembersButton.Location = new System.Drawing.Point(0, 120);
+            this.viewAllTeamMembersButton.Location = new System.Drawing.Point(0, 80);
             this.viewAllTeamMembersButton.Name = "viewAllTeamMembersButton";
             this.viewAllTeamMembersButton.Size = new System.Drawing.Size(250, 40);
             this.viewAllTeamMembersButton.TabIndex = 3;
@@ -300,25 +267,12 @@ namespace InventoryManagerUI
             this.viewTeamMemberButton.FlatAppearance.BorderSize = 0;
             this.viewTeamMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewTeamMemberButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewTeamMemberButton.Location = new System.Drawing.Point(0, 80);
+            this.viewTeamMemberButton.Location = new System.Drawing.Point(0, 40);
             this.viewTeamMemberButton.Name = "viewTeamMemberButton";
             this.viewTeamMemberButton.Size = new System.Drawing.Size(250, 40);
             this.viewTeamMemberButton.TabIndex = 2;
-            this.viewTeamMemberButton.Text = "View Member";
+            this.viewTeamMemberButton.Text = "View / Edit Member";
             this.viewTeamMemberButton.UseVisualStyleBackColor = true;
-            // 
-            // editTeamMemberButton
-            // 
-            this.editTeamMemberButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editTeamMemberButton.FlatAppearance.BorderSize = 0;
-            this.editTeamMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editTeamMemberButton.ForeColor = System.Drawing.Color.LightGray;
-            this.editTeamMemberButton.Location = new System.Drawing.Point(0, 40);
-            this.editTeamMemberButton.Name = "editTeamMemberButton";
-            this.editTeamMemberButton.Size = new System.Drawing.Size(250, 40);
-            this.editTeamMemberButton.TabIndex = 1;
-            this.editTeamMemberButton.Text = "Edit Member";
-            this.editTeamMemberButton.UseVisualStyleBackColor = true;
             // 
             // createTeamMemberButton
             // 
@@ -339,7 +293,7 @@ namespace InventoryManagerUI
             this.locationsDropdownButton.FlatAppearance.BorderSize = 0;
             this.locationsDropdownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.locationsDropdownButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.locationsDropdownButton.Location = new System.Drawing.Point(0, 893);
+            this.locationsDropdownButton.Location = new System.Drawing.Point(0, 735);
             this.locationsDropdownButton.Name = "locationsDropdownButton";
             this.locationsDropdownButton.Size = new System.Drawing.Size(250, 60);
             this.locationsDropdownButton.TabIndex = 7;
@@ -351,12 +305,11 @@ namespace InventoryManagerUI
             this.locationsDropdownPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.locationsDropdownPanel.Controls.Add(this.viewAllLocationsButton);
             this.locationsDropdownPanel.Controls.Add(this.viewLocationButton);
-            this.locationsDropdownPanel.Controls.Add(this.editLocationButton);
             this.locationsDropdownPanel.Controls.Add(this.createLocationButton);
             this.locationsDropdownPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.locationsDropdownPanel.Location = new System.Drawing.Point(0, 953);
+            this.locationsDropdownPanel.Location = new System.Drawing.Point(0, 795);
             this.locationsDropdownPanel.Name = "locationsDropdownPanel";
-            this.locationsDropdownPanel.Size = new System.Drawing.Size(250, 172);
+            this.locationsDropdownPanel.Size = new System.Drawing.Size(250, 119);
             this.locationsDropdownPanel.TabIndex = 8;
             this.locationsDropdownPanel.Visible = false;
             // 
@@ -366,7 +319,7 @@ namespace InventoryManagerUI
             this.viewAllLocationsButton.FlatAppearance.BorderSize = 0;
             this.viewAllLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewAllLocationsButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewAllLocationsButton.Location = new System.Drawing.Point(0, 120);
+            this.viewAllLocationsButton.Location = new System.Drawing.Point(0, 80);
             this.viewAllLocationsButton.Name = "viewAllLocationsButton";
             this.viewAllLocationsButton.Size = new System.Drawing.Size(250, 40);
             this.viewAllLocationsButton.TabIndex = 3;
@@ -379,25 +332,12 @@ namespace InventoryManagerUI
             this.viewLocationButton.FlatAppearance.BorderSize = 0;
             this.viewLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewLocationButton.ForeColor = System.Drawing.Color.LightGray;
-            this.viewLocationButton.Location = new System.Drawing.Point(0, 80);
+            this.viewLocationButton.Location = new System.Drawing.Point(0, 40);
             this.viewLocationButton.Name = "viewLocationButton";
             this.viewLocationButton.Size = new System.Drawing.Size(250, 40);
             this.viewLocationButton.TabIndex = 2;
-            this.viewLocationButton.Text = "View Location";
+            this.viewLocationButton.Text = "View / Edit Location";
             this.viewLocationButton.UseVisualStyleBackColor = true;
-            // 
-            // editLocationButton
-            // 
-            this.editLocationButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editLocationButton.FlatAppearance.BorderSize = 0;
-            this.editLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editLocationButton.ForeColor = System.Drawing.Color.LightGray;
-            this.editLocationButton.Location = new System.Drawing.Point(0, 40);
-            this.editLocationButton.Name = "editLocationButton";
-            this.editLocationButton.Size = new System.Drawing.Size(250, 40);
-            this.editLocationButton.TabIndex = 1;
-            this.editLocationButton.Text = "Edit Location";
-            this.editLocationButton.UseVisualStyleBackColor = true;
             // 
             // createLocationButton
             // 
@@ -418,7 +358,7 @@ namespace InventoryManagerUI
             this.supportButton.FlatAppearance.BorderSize = 0;
             this.supportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supportButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.supportButton.Location = new System.Drawing.Point(0, 1125);
+            this.supportButton.Location = new System.Drawing.Point(0, 914);
             this.supportButton.Name = "supportButton";
             this.supportButton.Size = new System.Drawing.Size(250, 60);
             this.supportButton.TabIndex = 9;
@@ -428,7 +368,6 @@ namespace InventoryManagerUI
             // sideMenuPanel
             // 
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.sideMenuPanel.Controls.Add(this.exitButtonPanel);
             this.sideMenuPanel.Controls.Add(this.supportButton);
             this.sideMenuPanel.Controls.Add(this.locationsDropdownPanel);
             this.sideMenuPanel.Controls.Add(this.locationsDropdownButton);
@@ -441,6 +380,7 @@ namespace InventoryManagerUI
             this.sideMenuPanel.Controls.Add(this.bottomLogoSpacer);
             this.sideMenuPanel.Controls.Add(this.logoPanel);
             this.sideMenuPanel.Controls.Add(this.taskbarleftPanel);
+            this.sideMenuPanel.Controls.Add(this.exitButtonPanel);
             this.sideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.sideMenuPanel.Name = "sideMenuPanel";
@@ -572,27 +512,21 @@ namespace InventoryManagerUI
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Button casesDropdownButton;
         private System.Windows.Forms.Panel casesDropdownPanel;
-        private System.Windows.Forms.Button viewAllCasesButton;
-        private System.Windows.Forms.Button viewCaseButton;
-        private System.Windows.Forms.Button editCaseButton;
         private System.Windows.Forms.Button createCaseButton;
         private System.Windows.Forms.Button equipmentDropdownButton;
         private System.Windows.Forms.Panel equipmentDropdownPanel;
         private System.Windows.Forms.Button viewAllEquipmentButton;
         private System.Windows.Forms.Button viewEquipmentButton;
-        private System.Windows.Forms.Button editEquipmentButton;
         private System.Windows.Forms.Button createEquipmentButton;
         private System.Windows.Forms.Button teamDropdownButton;
         private System.Windows.Forms.Panel teamDropdownPanel;
         private System.Windows.Forms.Button viewAllTeamMembersButton;
         private System.Windows.Forms.Button viewTeamMemberButton;
-        private System.Windows.Forms.Button editTeamMemberButton;
         private System.Windows.Forms.Button createTeamMemberButton;
         private System.Windows.Forms.Button locationsDropdownButton;
         private System.Windows.Forms.Panel locationsDropdownPanel;
         private System.Windows.Forms.Button viewAllLocationsButton;
         private System.Windows.Forms.Button viewLocationButton;
-        private System.Windows.Forms.Button editLocationButton;
         private System.Windows.Forms.Button createLocationButton;
         private System.Windows.Forms.Button supportButton;
         private System.Windows.Forms.Panel sideMenuPanel;
@@ -603,5 +537,7 @@ namespace InventoryManagerUI
         private System.Windows.Forms.Panel taskbarRightPanel;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button minimiseButton;
+        public System.Windows.Forms.Button viewCaseButton;
+        private System.Windows.Forms.Button viewAllCasesButton;
     }
 }

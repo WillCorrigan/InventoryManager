@@ -32,8 +32,9 @@ namespace InventoryManagerUI
             this.titlePanel = new System.Windows.Forms.Panel();
             this.viewAllCasesTitleLabel = new System.Windows.Forms.Label();
             this.viewAllCasesFormPanel = new System.Windows.Forms.Panel();
-            this.allCasesList = new System.Windows.Forms.ListView();
             this.getAllButton = new System.Windows.Forms.Button();
+            this.allCasesList = new System.Windows.Forms.ListView();
+            this.viewSelectedButton = new System.Windows.Forms.Button();
             this.titlePanel.SuspendLayout();
             this.viewAllCasesFormPanel.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace InventoryManagerUI
             // 
             // viewAllCasesFormPanel
             // 
+            this.viewAllCasesFormPanel.Controls.Add(this.viewSelectedButton);
             this.viewAllCasesFormPanel.Controls.Add(this.getAllButton);
             this.viewAllCasesFormPanel.Controls.Add(this.allCasesList);
             this.viewAllCasesFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,6 +71,16 @@ namespace InventoryManagerUI
             this.viewAllCasesFormPanel.Size = new System.Drawing.Size(978, 635);
             this.viewAllCasesFormPanel.TabIndex = 13;
             // 
+            // getAllButton
+            // 
+            this.getAllButton.Location = new System.Drawing.Point(337, 538);
+            this.getAllButton.Name = "getAllButton";
+            this.getAllButton.Size = new System.Drawing.Size(75, 23);
+            this.getAllButton.TabIndex = 1;
+            this.getAllButton.Text = "View All";
+            this.getAllButton.UseVisualStyleBackColor = true;
+            this.getAllButton.Click += new System.EventHandler(this.getAllButton_Click);
+            // 
             // allCasesList
             // 
             this.allCasesList.BackColor = System.Drawing.SystemColors.Window;
@@ -76,21 +88,22 @@ namespace InventoryManagerUI
             this.allCasesList.GridLines = true;
             this.allCasesList.HideSelection = false;
             this.allCasesList.Location = new System.Drawing.Point(36, 27);
+            this.allCasesList.MultiSelect = false;
             this.allCasesList.Name = "allCasesList";
             this.allCasesList.Size = new System.Drawing.Size(896, 439);
             this.allCasesList.TabIndex = 0;
             this.allCasesList.UseCompatibleStateImageBehavior = false;
             this.allCasesList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // getAllButton
+            // viewSelectedButton
             // 
-            this.getAllButton.Location = new System.Drawing.Point(438, 540);
-            this.getAllButton.Name = "getAllButton";
-            this.getAllButton.Size = new System.Drawing.Size(75, 23);
-            this.getAllButton.TabIndex = 1;
-            this.getAllButton.Text = "View All";
-            this.getAllButton.UseVisualStyleBackColor = true;
-            this.getAllButton.Click += new System.EventHandler(this.getAllButton_Click);
+            this.viewSelectedButton.Location = new System.Drawing.Point(449, 538);
+            this.viewSelectedButton.Name = "viewSelectedButton";
+            this.viewSelectedButton.Size = new System.Drawing.Size(114, 23);
+            this.viewSelectedButton.TabIndex = 2;
+            this.viewSelectedButton.Text = "View Selected";
+            this.viewSelectedButton.UseVisualStyleBackColor = true;
+            this.viewSelectedButton.Click += new System.EventHandler(this.viewSelectedButton_Click);
             // 
             // ViewAllCasesForm
             // 
@@ -101,7 +114,7 @@ namespace InventoryManagerUI
             this.Controls.Add(this.viewAllCasesFormPanel);
             this.Controls.Add(this.titlePanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewAllCasesForm";
             this.Text = "ViewAllCasesForm";
             this.titlePanel.ResumeLayout(false);
@@ -117,5 +130,6 @@ namespace InventoryManagerUI
         private System.Windows.Forms.Panel viewAllCasesFormPanel;
         private System.Windows.Forms.ListView allCasesList;
         private System.Windows.Forms.Button getAllButton;
+        private System.Windows.Forms.Button viewSelectedButton;
     }
 }

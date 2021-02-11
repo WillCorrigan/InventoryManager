@@ -43,7 +43,22 @@ namespace InventoryManagerUI
                 string strEndDate = caseItem.EndDate.ToString("dd/MM/yyyy");
                 string[] row = { caseItem.CaseName, strStartDate, strEndDate};
                 var listViewItem = new ListViewItem(row);
+                listViewItem.Tag = caseItem;
                 allCasesList.Items.Add(listViewItem);
+            }
+        }
+
+        private void viewSelectedButton_Click(object sender, EventArgs e)
+        {
+            if (allCasesList.SelectedItems.Count > 0)
+            {
+                DashboardForm parent = (DashboardForm)ParentForm;
+                parent.OpenChildForm(new ViewEditCaseForm((CaseModel)allCasesList.SelectedItems[0].Tag), sender);
+                parent.HighlightActiveSubmenuButton(parent.viewCaseButton);
+            }
+            else
+            {
+                MessageBox.Show("Nothing is selected", "Error");
             }
         }
     }

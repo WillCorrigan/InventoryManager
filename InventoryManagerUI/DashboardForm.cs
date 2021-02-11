@@ -85,7 +85,7 @@ namespace InventoryManagerUI
             }
         }
 
-        private void HighlightActiveSubmenuButton(Object sender)
+        public void HighlightActiveSubmenuButton(Object sender)
         {
             var buttonObject = ((Button)sender);
             if (currentActiveSubmenuButton == null)
@@ -125,7 +125,7 @@ namespace InventoryManagerUI
 
 
         // Opens child form in dashboard main screen
-        private void OpenChildForm(Form childForm, object sender)
+        public void OpenChildForm(Form childForm, object sender)
         {
             if (currentActiveForm != null)
             {
